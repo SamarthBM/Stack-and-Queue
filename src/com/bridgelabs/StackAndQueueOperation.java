@@ -51,6 +51,7 @@ public class StackAndQueueOperation<K> {
 	
 	int front;
 	int rear;
+	int size;
 	// Array list to store elements of queue
 	ArrayList<K> myQueue = new ArrayList<>();
 	
@@ -61,12 +62,23 @@ public class StackAndQueueOperation<K> {
 	 */
 	public void addElementsToQueue(K data) {
 		myQueue.add(rear, data);
-		rear++;				
+		rear++;		
+		size = size+1;
 	}
 	
+	/* purpose: Method to remove elements from queue. */
+	public K removeElementsFromQueue() {
+		K data;
+		data=myQueue.get(front);
+		front++;	
+		size = size-1;
+		return data;
+	}
 	/* purpose: Method to display the elements in queue. */
 	public void displayQueue() {
-		System.out.println(myQueue);
+		for(int i=0; i<size;i++) {
+			System.out.println(myQueue.get(front+i)+" ");
+		}
 	}
 	
 	
