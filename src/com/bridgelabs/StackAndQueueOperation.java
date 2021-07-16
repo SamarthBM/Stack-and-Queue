@@ -46,5 +46,30 @@ public class StackAndQueueOperation<K> {
 		Collections.reverse(myStack);
 		System.out.println(myStack);
 	}
+	
+	/*Implementing methods for Queue*/
+	
+	int front;
+	int rear;
+	// Array list to store elements of queue
+	ArrayList<K> myQueue = new ArrayList<>();
+	
+	/*
+	 * purpose: Method to add elements to Queue.
+	 * 
+	 * @param data: elements to be added.
+	 */
+	public void addElementsToQueue(K data) {
+		myQueue.add(rear, data);
+		rear++;				
+	}
+	
+	/* purpose: Method to display the elements in queue. */
+	public void displayQueue() {
+		System.out.println(myQueue);
+	}
+	
+	
+
 
 }
