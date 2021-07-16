@@ -1,8 +1,5 @@
 /****************************************************************
- * Purpose : To push elements to stack.
- * 70 will be added first,
- * 30 and 56 is later pushed to get 56 on top.
- * Final sequence: 56->30->70
+ * Purpose : To pop and peek in stack.
  * @author Samarth BM
 
 ***************************************************************/
@@ -19,6 +16,10 @@ public class StackRunner {
 		performOperation.addElement(56);
 		//Displaying all the elements in stack.
 		performOperation.show();
+		//To perform pop operation to remove last element.
+		System.out.println(performOperation.removeElement());
+		//To perform peek operation to show last element.
+		System.out.println(performOperation.peekElements());
 		
 
 	}

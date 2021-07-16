@@ -25,9 +25,24 @@ public class StackAndQueueOperation<K> {
 		count++;
 	}
 
+	/* purpose: Method to remove elements from stack */
+	public K removeElement() {
+		K data;
+		count--;
+		data = myStack.get(count);
+		myStack.remove(data);
+		return data;
+	}
+
+	/* purpose: Method to show last element in stack */
+	public K peekElements() {
+		K data;
+		data = myStack.get(count - 1);
+		return data;
+	}
+
 	/* purpose: Method to display the elements in stack */
 	public void show() {
-
 		Collections.reverse(myStack);
 		System.out.println(myStack);
 	}
